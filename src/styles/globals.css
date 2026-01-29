@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/*
+ * tomhealth Design Tokens
+ *
+ * Color palette: CDC-appropriate, color-blind-safe.
+ * Derived from ColorBrewer sequential and qualitative schemes.
+ */
+
+:root {
+  /* Brand */
+  --color-brand: #005ea2;
+  --color-brand-dark: #1a3c5e;
+  --color-brand-light: #d9e8f6;
+
+  /* Neutral */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f7f8fa;
+  --color-bg-tertiary: #e8ecf1;
+  --color-text-primary: #1b1b1b;
+  --color-text-secondary: #565c65;
+  --color-text-muted: #919191;
+  --color-border: #c9cdd3;
+
+  /* Semantic */
+  --color-success: #00a91c;
+  --color-warning: #e5a000;
+  --color-error: #d54309;
+  --color-info: #00bde3;
+
+  /* Chart series — color-blind-safe (ColorBrewer "Dark2") */
+  --color-series-1: #1b9e77;
+  --color-series-2: #d95f02;
+  --color-series-3: #7570b3;
+  --color-series-4: #e7298a;
+  --color-series-5: #66a61e;
+  --color-series-6: #e6ab02;
+  --color-series-7: #a6761d;
+
+  /* Chart special */
+  --color-confidence-band: rgba(0, 94, 162, 0.12);
+  --color-provisional: rgba(0, 94, 162, 0.45);
+  --color-suppressed: #c9cdd3;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Typography */
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Source Code Pro", ui-monospace, monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+}
